@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Libre+Baskerville&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href= "alasivutyyli.css">
+        <title>Minusta</title>
+    </head>
+<body>
+    <video autoplay muted loop id="ocean">
+        <source src="ocean.mp4" type="video/mp4">
+    </video>
+    <div class="pausebutton">
+            <button id="pause" onclick="myFunction()">Pause</button>
+            
+    </div>
+    <div class="title">
+        <h1>Minusta</h1>
+    </div>
+    <div class = "image">
+        <img class="slides" src="minusta.jpg" width="100%" height="100%">
+        <img class="slides" src="kuvaminusta2.png" width="100%" height="100%">
+        <img class="slides" src="kuvaminusta3.png" width="100%" height="100%"> 
+        <div class = "back">
+            <a href="yhteystiedot.html"><p>← Edellinen</p></a>
+        </div>
+         <div class = "previous">
+                <a href="../paasivu.html"><p>↑ Etusivulle</p></a>
+        </div>
+        <div class ="next">
+            <a href="osaamiseni.html"><p>→ Seuraava</p></a>
+        </div> 
+    </div>
+         <div class = "text">
+            <p>Olen melkein 30- vuotias töissä käyvä opiskelija. Tällä hetkellä olen henkilöstöpalveluyrityksessä asiakaspalvelutöissä kaupan alalla. Opiskelen Haaga-Helian Ammattikorkeakoulussa IT-tradenomi linjalla. <br> Aion siis uurtaa uraa IT-alalla! </p>
+            <p>Luonteeltani olen avoin, rauhallinen, puhelias, sympaattinen ja optimistinen. Töitä tehdessäni pyrin olemaan ahkera, nopea ja osaava. Jos jokin jää minulta epäselväksi töissä, kysyn mieluiten tarkennusta kuin että menen ”sooloilemaan”. </p>
+            <p>Olen asunut aikoinani ulkomailla, joten olen siinä mielessä ehkä vähän enemmän kansainvälisempi suomalainen; puhun nimittäin 5 eri kieltä, joista käytän kolmea päivittäin! </p>
+            <p>Harrastuksiakin löytyy: tietokoneella pelaaminen, ja pelien striimaaminen, koiran ja kissojen kanssa touhuilu, ja välillä myös sulkapalloilu (mikäli siihen löydän jonkun, jonka kanssa pelata)! Suurin osa ajasta kuitenkin kuluu ruudun ääressä. Ei kuitenkaan pelkästään vaan oleiluun, mutta tiedonhakuun, uusien asioiden oppimiseen ja kuten edellä mainitsin, niin pelaamiseen.</p>
+        </div>
+       
+
+    <script>
+        var video = document.getElementById("ocean")
+        var btn = document.getElementById("pause")
+        var slideIndex = 0;
+        carousel();
+        function myFunction() {
+            if (video.paused){
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slides");
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            }
+                 slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+    </script>
+</body>
+</html>

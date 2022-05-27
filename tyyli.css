@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: bold;
+}
+h1 {
+    font-family: 'Libre Baskerville', serif;
+}
+h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 900;
+}
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:visited {
+    color: maroon;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#ocean {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.container {
+    position: relative;
+}
+.containertitle{
+    position: relative;
+    margin: 10px auto;
+    width: 1000px;
+    border: 5px solid white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 150%;
+}
+
+.box {
+    position: fixed;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    margin: 0;
+    padding: 20;
+}
+.containerbox {
+    position: relative;
+    width: 1000px;
+    height: 800px;
+    margin: 50px auto;
+}
+.containerbox .box{
+        position: relative;
+        width: calc(400px - 30px);
+        height: calc(300px - 30px);
+        border-color: #fff;
+        float: left;
+        margin: 65px;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 10px;
+}
+
+.containerbox .box .content{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 150%;
+    
+}
+
+.containterbox .box img:hover{
+    opacity: 0.3;
+}
+.containerbox .box .content:hover{
+    opacity: 1;
+}
+.containerbox .box .content2{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 85px;
+    left: 90px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 150%;
+}
+.containterbox .box img:hover{
+    opacity: 0.3;
+}
+.containerbox .box .content2:hover{
+    opacity: 1;
+}
+.containerbox .box .content3{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 85px;
+    left: 70px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 150%;
+}
+.containterbox .box img:hover{
+    opacity: 0.3;
+}
+.containerbox .box .content3:hover{
+    opacity: 1;
+}
+.containerbox .box .content4{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 85px;
+    left: 80px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 150%;
+}
+.containterbox .box img:hover{
+    opacity: 0.3;
+}
+.containerbox .box .content4:hover{
+    opacity: 1;
+}
+.pausebutton {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}    
+#pause {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    opacity: 25%;
+    color: #fff;
+    cursor: pointer;
+}
+
+#pause:hover {
+    background: #ddd;
+    color: black;
+    opacity: 100%;
+}

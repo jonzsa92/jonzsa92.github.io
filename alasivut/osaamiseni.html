@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Libre+Baskerville&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href= "alasivutyyli.css">
+        <title>Osaamiseni</title>
+    </head>
+<body>
+    <video autoplay muted loop id="ocean">
+        <source src="ocean.mp4" type="video/mp4">
+    </video>
+    <div class="pausebutton">
+            <button id="pause" onclick="myFunction()">Pause</button>
+    </div>
+    <div class="title">
+    <h1>Osaamiseni</h1>
+    </div>
+    <div class = "image">
+        <img class ="slides" src="https://cdn.pixabay.com/photo/2016/03/27/07/12/apple-1282241_960_720.jpg" width="100%" height="100%">
+        <img class ="slides" src="https://cdn.pixabay.com/photo/2015/10/30/10/45/service-1013724_960_720.jpg" width="100%" height="100%">
+        <img class ="slides" src="https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png" width="100%" height="100%">
+    
+    <div class = "back">
+        <a href="minusta.html"><p>← Edellinen</p></a>  
+    </div>
+     <div class = "previous">
+            <a href="../paasivu.html"><p>↑ Etusivulle</p></a> 
+    </div>
+    <div class ="next">
+         <a href ="kiinnostukseni.html"><p>→ Seuraava</p></a> 
+    </div> 
+</div>
+</div>
+         <div class = "text">
+            <p>Opiskelen tällä hetkellä IT-tradenomi linjaa, mutta olen myös opiskellut aikaisemmin muitakin linjoja: ICT-linjaa Luxemburgin Yliopistossa (2010-2011), YO-merkonomi-linjaa Prakticumissa (2011-2012) ja Oikeustiedettä Tallinnan yliopistossa (2012-2018). </p>
+            <p>Työkokemukseni taas on enimmäkseen vain asiakaspalvelualalta. Olen ollut harjoittelijana Stockmannilla elektroniikkaosastolla (2012, jolloin heillä vielä oli oma osasto siihen), toimistoassistenttina lakitoimistossa (2016). Tällä hetkellä olen henkilöstöpalveluyritys Joblink Oy:llä asiakaspalvelutöissä kaupan alalla. Työnimikkeeni on asiakaspalveluasiantuntija (Customer Service Specialist).  Olen ollut yrityksen työntekijä vuodesta 2019. </p>
+            <p>Olen vuosien mittaan tietokoneella hääriessäni oppinut kaikenlaista, esimerkiksi Windows Officen ohjelmat ovat erittäin tuttuja. Adoben Photoshop ja After Effects ovat tulleet video- ja kuvanmuokkausten kautta tutuksi. Käyttöjärjestelmiä joita osaan käyttää ovat Windows ja Applen iOs (tosin käytän Windowsia melkein eksklusiivisesti). Ohjelmointia on tullut myös harjoiteltua JavaScriptin ja HTML:n avulla (Visual Studio Code). </p>
+        </div>
+    <script>
+        var video = document.getElementById("ocean")
+        var btn = document.getElementById("pause")
+        var slideIndex = 0;
+        carousel();
+        function myFunction() {
+            if (video.paused){
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slides");
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            }
+                 slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+    </script>
+</body>
+</html>
