@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+h1 {
+    font-family: 'Libre Baskerville', serif;
+}
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:visited {
+    color: maroon;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#ocean {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.pausebutton {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}    
+#pause {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    opacity: 25%;
+    color: #fff;
+    cursor: pointer;
+}
+
+#pause:hover {
+    background: #ddd;
+    color: black;
+    opacity: 100%;
+}
+.title{
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    border: 5px solid white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 150%;
+}
+.image{
+    position: relative;
+    margin: 75px;
+    width: 400px;
+    height: 300px;
+    border: 5px solid white;
+    border-radius: 10px;
+    float: left;
+}
+.text{
+    position: relative;
+    margin: 50px;
+    width: 1000px;
+    height: 400px;
+    border: 5px solid white;
+    border-radius: 10px;
+    float: left;
+    color: white;
+    text-align: center;
+}
+p {
+    font-size: 20px;
+}
+.previous{
+    position: relative;
+    float: left;
+    color: white;
+    font-size: 150%;
+    margin: 10px;
+}.back{
+    position: relative;
+    float: left;
+    color: white;
+    font-size: 150%;
+    margin: 10px;
+}.next{
+    position: relative;
+    float: left;
+    color: white;
+    font-size: 150%;
+    margin: 10px
+}
